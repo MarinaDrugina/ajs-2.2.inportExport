@@ -14,11 +14,20 @@
             "error", 
             "windows"
         ],
-        "no-unused-vars": "off",
-        "no-undef": "off",
-        "import/extentions": [
+        "import/extensions": [ 
+            "error", 
+            "ignorePackages", 
+            { "": "never" } 
+        ],
+        "max-classes-per-file": [
             "error",
-            "ignorePackages"
-        ]
+            { "ignoreExpressions": true, "max": 2 }
+        ],
+        "class-methods-use-this": [
+            "error", 
+            {"exceptMethods": ["start"]}
+        ],
+        "no-unused-vars": "off",
+        "no-undef": "off"
    }
 }
